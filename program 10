@@ -26,7 +26,7 @@
                  fgets(buffer,50,stdin);  
                  some_data.msg_type=1;  
                  strcpy(some_data.some_text,buffer);  
-                 if(msgsnd(msgid,(void *)&some_data, MAX_TEXT,0)==-1) // msgsnd returns -1 if the message is not sent  
+                 if(msgsnd(msgid,(void *)&some_data, MAX_TEXT,0)==-1) 
                  {  
                          printf("Msg not sent\n");  
                  }  

@@ -1,0 +1,36 @@
+# include <stdio.h>
+# include <string.h>
+
+int main( )
+{
+
+	FILE *filePointer ;
+
+	char dataToBeWritten[50]
+		= "operating systems";
+
+	filePointer = fopen("hfgTest.c", "w") ;
+
+	if ( filePointer == NULL )
+	{
+		printf( "hfgTest.c file failed to open." ) ;
+	}
+	else
+	{
+
+		printf("The file is now opened.\n") ;
+
+		if ( strlen ( dataToBeWritten ) > 0 )
+		{
+
+			fputs(dataToBeWritten, filePointer) ;
+			fputs("\n", filePointer) ;
+		}
+
+		fclose(filePointer) ;
+
+		printf("Data successfully written in file hfgTest.c\n");
+		printf("The file is now closed.") ;
+	}
+	return 0;	
+}
